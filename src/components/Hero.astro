@@ -15,7 +15,8 @@ const t = dict[lang];
 
     <span class="block w-14 h-0.5 bg-accent hero-reveal" aria-hidden="true"></span>
 
-    <p class="max-w-2xl text-text-primary text-base md:text-lg font-body hero-reveal" set:html={t.hero.tagline}>
+    <p class="max-w-xl text-text-primary text-base md:text-lg font-body hero-reveal">
+      {t.hero.tagline.split('<br>')[0]}
     </p>
 
     <a href="#contato" class="btn-outline mt-2 hero-reveal">
