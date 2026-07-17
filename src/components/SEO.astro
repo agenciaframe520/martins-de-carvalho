@@ -1,5 +1,5 @@
 ---
-import { SITE, LANGS, EMAIL, WHATSAPP, dict, type Lang } from '../i18n/ui';
+import { SITE, LANGS, EMAIL, WHATSAPP, langHref, dict, type Lang } from '../i18n/ui';
 
 interface Props {
   lang: Lang;
@@ -18,9 +18,9 @@ const canonical = new URL(pathname, SITE).href;
 const ogImage = new URL('/og-image.png', SITE).href;
 
 // Alternate hreflang entries — only for main landing pages, not privacy/thank-you
-const isLanding = pathname.replace(/\/$/, '') === `/${lang}`;
+const isLanding = pathname.replace(/\/$/, '') === langHref(lang).replace(/\/$/, '');
 const alternates = isLanding
-  ? [...LANGS.map((l) => ({ hreflang: l.hreflang, href: new URL(`/${l.code}/`, SITE).href })), { hreflang: 'x-default', href: new URL('/pt/', SITE).href }]
+  ? [...LANGS.map((l) => ({ hreflang: l.hreflang, href: new URL(langHref(l.code), SITE).href })), { hreflang: 'x-default', href: new URL('/', SITE).href }]
   : [];
 
 // schema.org: ProfessionalService + Person + WebSite + WebPage

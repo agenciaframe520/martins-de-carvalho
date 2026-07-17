@@ -1,17 +1,20 @@
 ---
-// Root redirect: Astro i18n should auto-redirect, this is fallback for static hosts.
-return Astro.redirect('/pt/');
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Sobre from '../components/Sobre.astro';
+import Areas from '../components/Areas.astro';
+import Publicacoes from '../components/Publicacoes.astro';
+import MariaSection from '../components/MariaSection.astro';
+import Contato from '../components/Contato.astro';
+
+const lang = 'pt' as const;
 ---
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=/pt/" />
-    <link rel="canonical" href="https://www.martinsdecarvalho.com.br/pt/" />
-    <meta name="robots" content="noindex" />
-    <title>Martins de Carvalho</title>
-  </head>
-  <body>
-    <p>Redirecting to <a href="/pt/">/pt/</a></p>
-  </body>
-</html>
+
+<BaseLayout lang={lang}>
+  <Hero lang={lang} />
+  <Sobre lang={lang} />
+  <Areas lang={lang} />
+  <Publicacoes lang={lang} />
+  <MariaSection lang={lang} />
+  <Contato lang={lang} />
+</BaseLayout>

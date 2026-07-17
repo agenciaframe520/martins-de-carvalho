@@ -10,8 +10,7 @@ export default defineConfig({
     defaultLocale: 'pt',
     locales: ['pt', 'de', 'en', 'es'],
     routing: {
-      prefixDefaultLocale: true,
-      redirectToDefaultLocale: true,
+      prefixDefaultLocale: false,
     },
   },
   image: {
@@ -26,8 +25,8 @@ export default defineConfig({
     sitemap({
       filter: (page) => {
         const path = new URL(page).pathname;
-        // Skip the root redirect page and the post-form thank-you pages.
-        if (path === '/' || /\/(obrigado|danke|thank-you|gracias)\/?$/.test(path)) return false;
+        // Skip the post-form thank-you pages only.
+        if (/\/(obrigado|danke|thank-you|gracias)\/?$/.test(path)) return false;
         return true;
       },
     }),

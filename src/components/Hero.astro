@@ -7,13 +7,8 @@ const { lang } = Astro.props;
 const t = dict[lang];
 ---
 
-<section id="top" class="section-y flex flex-col items-center text-center relative overflow-hidden">
-  <!-- Decorative diagonal echoing the logo -->
-  <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-    <line x1="5" y1="95" x2="95" y2="5" stroke="var(--color-accent)" stroke-width="0.12" opacity="0.18" />
-  </svg>
-
-  <div class="container-md flex flex-col items-center gap-6 relative z-10">
+<section id="top" class="section-y flex flex-col items-center text-center">
+  <div class="container-md flex flex-col items-center gap-6">
     <span class="w-64 h-64 md:w-80 md:h-80 hero-reveal">
       <Logo variant="light" class="w-full h-full" />
     </span>

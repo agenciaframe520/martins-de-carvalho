@@ -1,6 +1,6 @@
 ---
 import Logo from './Logo.astro';
-import { dict, LANGS, type Lang } from '../i18n/ui';
+import { dict, LANGS, langHref, type Lang } from '../i18n/ui';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -15,7 +15,7 @@ const items = [
 
 <header class="sticky top-0 z-40 bg-background-alt/95 backdrop-blur-sm border-b border-border-soft">
   <div class="container-md flex items-center justify-between py-4 gap-4">
-    <a href={`/${lang}/`} class="shrink-0" aria-label="Martins de Carvalho — home">
+    <a href={langHref(lang)} class="shrink-0" aria-label="Martins de Carvalho — home">
       <span class="block w-10 h-10 md:w-12 md:h-12">
         <Logo variant="light" class="w-full h-full" />
       </span>
@@ -32,7 +32,7 @@ const items = [
       <nav aria-label="Language" class="flex items-center gap-1.5 text-small font-medium">
         {LANGS.map((l) => (
           <a
-            href={`/${l.code}/`}
+            href={langHref(l.code)}
             aria-current={l.code === lang ? 'true' : undefined}
             class:list={[
               'min-w-[44px] min-h-[44px] flex items-center justify-center rounded transition-colors',

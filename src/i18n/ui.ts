@@ -13,6 +13,10 @@ export const LINKEDIN = 'https://www.linkedin.com/in/mariamartinsdecarvalho4a619
 export const PUBLICATIONS_URL = 'https://www.cloudcoaching.com.br/topicos/maria-pereira-martins-de-carvalho/';
 export const WHATSAPP = '+5511963407781';
 
+export function langHref(lang: Lang): string {
+  return lang === 'pt' ? '/' : `/${lang}/`;
+}
+
 type Dict = {
   htmlLang: string;
   nav: { sobre: string; areas: string; publicacoes: string; contato: string };
