@@ -1,0 +1,77 @@
+---
+import { type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+
+const privacyPaths: Record<Lang, string> = {
+  pt: '/pt/privacidade/',
+  de: '/de/datenschutz/',
+  en: '/en/privacy/',
+  es: '/es/privacidad/',
+};
+
+const banner: Record<Lang, { text: string; linkLabel: string; btn: string }> = {
+  pt: {
+    text: 'Este site usa cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa',
+    linkLabel: 'Política de Privacidade',
+    btn: 'Aceitar',
+  },
+  de: {
+    text: 'Diese Website verwendet Cookies, um Ihr Erlebnis zu verbessern. Mit der weiteren Nutzung stimmen Sie unserer',
+    linkLabel: 'Datenschutzerklärung',
+    btn: 'Akzeptieren',
+  },
+  en: {
+    text: 'This site uses cookies to improve your experience. By continuing to browse, you agree to our',
+    linkLabel: 'Privacy Policy',
+    btn: 'Accept',
+  },
+  es: {
+    text: 'Este sitio utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra',
+    linkLabel: 'Política de Privacidad',
+    btn: 'Aceptar',
+  },
+};
+
+const b = banner[lang];
+const privacyPath = privacyPaths[lang];
+---
+
+<div id="lgpd-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-background border-t border-border-soft shadow-md translate-y-full transition-transform duration-500 ease-out" aria-hidden="true">
+  <div class="container-md py-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6">
+    <p class="text-small text-text-secondary flex-1">
+      {b.text}{' '}
+      <a href={privacyPath} class="underline decoration-accent underline-offset-2 hover:text-primary transition-colors whitespace-nowrap">{b.linkLabel}</a>.
+    </p>
+    <div class="flex items-center gap-3 shrink-0">
+      <a href={privacyPath} class="text-small text-text-secondary underline hover:text-primary transition-colors">{b.linkLabel}</a>
+      <button id="lgpd-aceitar" class="btn-primary text-small">{b.btn}</button>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    var key = 'lgpd-consent';
+    if (localStorage.getItem(key)) return;
+
+    var banner = document.getElementById('lgpd-banner');
+    if (!banner) return;
+
+    setTimeout(function () {
+      banner.setAttribute('aria-hidden', 'false');
+      banner.classList.remove('translate-y-full');
+      banner.classList.add('translate-y-0');
+    }, 200);
+
+    function aceitar() {
+      localStorage.setItem(key, '1');
+      banner.classList.remove('translate-y-0');
+      banner.classList.add('translate-y-full');
+      setTimeout(function () { banner.remove(); }, 500);
+    }
+
+    document.getElementById('lgpd-aceitar')?.addEventListener('click', aceitar);
+  })();
+</script>

@@ -1,0 +1,25 @@
+---
+import logoDarkRaw from '../assets/logo-dark.svg?raw';
+import logoLightRaw from '../assets/logo-light.svg?raw';
+
+interface Props {
+  variant?: 'dark' | 'light';
+  class?: string;
+}
+
+const { variant = 'dark', class: className = '' } = Astro.props;
+const raw = variant === 'dark' ? logoDarkRaw : logoLightRaw;
+
+const clean = raw
+  .replace(/<sodipodi:namedview[\s\S]*?<\/sodipodi:namedview>/, '')
+  .replace(/<inkscape:page[\s\S]*?\/>/, '')
+  .replace(/\s+inkscape:[a-zA-Z-]+="[^"]*"/g, '')
+  .replace(/\s+sodipodi:[a-zA-Z-]+="[^"]*"/g, '')
+  .replace(/<!--[\s\S]*?-->/g, '')
+  .replace(/\s+xmlns:inkscape="[^"]*"/, '')
+  .replace(/\s+xmlns:sodipodi="[^"]*"/, '')
+  .replace(/width="[^"]*"/, 'width="100%"')
+  .replace(/height="[^"]*"/, 'height="100%"');
+---
+
+<span class={`inline-block ${className}`} set:html={clean} />

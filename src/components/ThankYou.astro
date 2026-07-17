@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { dict, type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict[lang];
+const homeUrl = `/${lang}/`;
+---
+
+<BaseLayout lang={lang} noindex>
+  <section class="section-y flex flex-col items-center text-center">
+    <div class="container-md flex flex-col items-center gap-6 max-w-xl">
+      <p class="text-success font-medium text-h3">{t.contato.success}</p>
+      <a href={homeUrl} class="btn-outline">{t.nav.sobre} →</a>
+    </div>
+  </section>
+</BaseLayout>

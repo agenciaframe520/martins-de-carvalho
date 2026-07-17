@@ -1,0 +1,90 @@
+---
+import Logo from './Logo.astro';
+import { dict, LANGS, type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict[lang];
+const items = [
+  { href: '#sobre', label: t.nav.sobre },
+  { href: '#areas', label: t.nav.areas },
+  { href: '#publicacoes', label: t.nav.publicacoes },
+  { href: '#contato', label: t.nav.contato },
+];
+---
+
+<header class="sticky top-0 z-40 bg-background-alt/95 backdrop-blur-sm border-b border-border-soft">
+  <div class="container-md flex items-center justify-between py-4 gap-4">
+    <a href={`/${lang}/`} class="shrink-0" aria-label="Martins de Carvalho — home">
+      <span class="block w-10 h-10 md:w-12 md:h-12">
+        <Logo variant="light" class="w-full h-full" />
+      </span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-7 text-small" aria-label="Primary">
+      {items.map((i) => (
+        <a href={i.href} class="nav-link text-text-secondary hover:text-primary transition-colors">{i.label}</a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <nav aria-label="Language" class="flex items-center gap-1.5 text-small font-medium">
+        {LANGS.map((l) => (
+          <a
+            href={`/${l.code}/`}
+            aria-current={l.code === lang ? 'true' : undefined}
+            class:list={[
+              'min-w-[44px] min-h-[44px] flex items-center justify-center rounded transition-colors',
+              l.code === lang
+                ? 'text-primary border-b border-accent'
+                : 'text-text-secondary hover:text-primary',
+            ]}
+          >{l.label}</a>
+        ))}
+      </nav>
+
+      <!-- Hamburger -->
+      <button id="nav-hamburger" class="block md:hidden cursor-pointer p-2 -mr-2" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile nav panel -->
+  <div id="nav-mobile" class="hidden border-t border-border-soft bg-background/95 backdrop-blur-sm md:hidden">
+    <nav class="container-md flex flex-col py-4 gap-2" aria-label="Primary mobile">
+      {items.map((i) => (
+        <a href={i.href} class="nav-link-mobile block py-2 text-text-secondary hover:text-primary transition-colors text-small">{i.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script is:inline>
+  (function () {
+    var btn = document.getElementById('nav-hamburger');
+    var panel = document.getElementById('nav-mobile');
+    if (!btn || !panel) return;
+
+    btn.addEventListener('click', function () {
+      var open = panel.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', !open);
+      // Swap icon between hamburger and X
+      btn.innerHTML = open
+        ? '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>'
+        : '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M6 18l12-12"/></svg>';
+    });
+
+    // Close menu on link click
+    panel.querySelectorAll('.nav-link-mobile').forEach(function (link) {
+      link.addEventListener('click', function () {
+        panel.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.innerHTML = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>';
+      });
+    });
+  })();
+</script>

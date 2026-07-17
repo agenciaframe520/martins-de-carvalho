@@ -1,0 +1,186 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { EMAIL, type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+
+const content: Record<Lang, { title: string; metaDesc: string; sections: { h: string; p: string[] }[] }> = {
+  pt: {
+    title: 'Política de Privacidade — Martins de Carvalho',
+    metaDesc: 'Saiba como a Martins de Carvalho coleta, usa e protege seus dados pessoais em conformidade com a LGPD.',
+    sections: [
+      {
+        h: 'Dados que coletamos',
+        p: [
+          'Quando você preenche o formulário de contato do site, coletamos apenas as informações que você nos fornece voluntariamente:',
+          '• Nome\n• Email\n• Mensagem (o conteúdo da sua mensagem)',
+          'Não coletamos dados de navegação, cookies de rastreamento ou qualquer informação pessoal além do que você envia pelo formulário.',
+        ],
+      },
+      {
+        h: 'Como usamos seus dados',
+        p: [
+          'Seus dados são usados exclusivamente para responder à sua mensagem. Não compartilhamos, vendemos ou alugamos suas informações para terceiros.',
+        ],
+      },
+      {
+        h: 'Armazenamento',
+        p: [
+          'Seus dados ficam armazenados apenas pelo tempo necessário para atender sua solicitação. Você pode solicitar a exclusão a qualquer momento entrando em contato pelo mesmo email.',
+        ],
+      },
+      {
+        h: 'Seus direitos',
+        p: [
+          'Você tem direito a:',
+          '• Saber quais dados temos sobre você\n• Solicitar a correção ou exclusão dos seus dados\n• Revogar seu consentimento a qualquer momento',
+        ],
+      },
+      {
+        h: 'Contato',
+        p: [
+          `Para exercer seus direitos ou tirar dúvidas sobre esta política, escreva para ${EMAIL}.`,
+        ],
+      },
+    ],
+  },
+  de: {
+    title: 'Datenschutzerklärung — Martins de Carvalho',
+    metaDesc: 'Erfahren Sie, wie Martins de Carvalho Ihre personenbezogenen Daten in Übereinstimmung mit der LGPD erhebt, nutzt und schützt.',
+    sections: [
+      {
+        h: 'Welche Daten wir erheben',
+        p: [
+          'Wenn Sie das Kontaktformular auf unserer Website ausfüllen, erheben wir nur die Informationen, die Sie uns freiwillig zur Verfügung stellen:',
+          '• Name\n• E-Mail\n• Nachricht (der Inhalt Ihrer Nachricht)',
+          'Wir erheben keine Browserdaten, Tracking-Cookies oder persönliche Informationen über das hinaus, was Sie über das Formular senden.',
+        ],
+      },
+      {
+        h: 'Wie wir Ihre Daten verwenden',
+        p: [
+          'Ihre Daten werden ausschließlich zur Beantwortung Ihrer Nachricht verwendet. Wir geben, verkaufen oder vermieten Ihre Informationen nicht an Dritte weiter.',
+        ],
+      },
+      {
+        h: 'Speicherung',
+        p: [
+          'Ihre Daten werden nur so lange gespeichert, wie es für die Bearbeitung Ihrer Anfrage erforderlich ist. Sie können jederzeit die Löschung per E-Mail anfordern.',
+        ],
+      },
+      {
+        h: 'Ihre Rechte',
+        p: [
+          'Sie haben das Recht:',
+          '• Zu erfahren, welche Daten wir über Sie haben\n• Die Berichtigung oder Löschung Ihrer Daten zu verlangen\n• Ihre Einwilligung jederzeit zu widerrufen',
+        ],
+      },
+      {
+        h: 'Kontakt',
+        p: [
+          `Um Ihre Rechte auszuüben oder Fragen zu dieser Richtlinie zu stellen, schreiben Sie an ${EMAIL}.`,
+        ],
+      },
+    ],
+  },
+  en: {
+    title: 'Privacy Policy — Martins de Carvalho',
+    metaDesc: 'Learn how Martins de Carvalho collects, uses and protects your personal data in compliance with the LGPD.',
+    sections: [
+      {
+        h: 'Data we collect',
+        p: [
+          'When you fill out the contact form on our website, we collect only the information you voluntarily provide:',
+          '• Name\n• Email\n• Message (the content of your message)',
+          'We do not collect browsing data, tracking cookies or any personal information beyond what you submit through the form.',
+        ],
+      },
+      {
+        h: 'How we use your data',
+        p: [
+          'Your data is used exclusively to respond to your message. We do not share, sell or rent your information to third parties.',
+        ],
+      },
+      {
+        h: 'Storage',
+        p: [
+          'Your data is stored only as long as necessary to address your request. You may request deletion at any time by email.',
+        ],
+      },
+      {
+        h: 'Your rights',
+        p: [
+          'You have the right to:',
+          '• Know what data we hold about you\n• Request correction or deletion of your data\n• Withdraw your consent at any time',
+        ],
+      },
+      {
+        h: 'Contact',
+        p: [
+          `To exercise your rights or ask questions about this policy, write to ${EMAIL}.`,
+        ],
+      },
+    ],
+  },
+  es: {
+    title: 'Política de Privacidad — Martins de Carvalho',
+    metaDesc: 'Conozca cómo Martins de Carvalho recopila, utiliza y protege sus datos personales en cumplimiento de la LGPD.',
+    sections: [
+      {
+        h: 'Datos que recopilamos',
+        p: [
+          'Cuando completa el formulario de contacto en nuestro sitio web, recopilamos solo la información que usted proporciona voluntariamente:',
+          '• Nombre\n• Email\n• Mensaje (el contenido de su mensaje)',
+          'No recopilamos datos de navegación, cookies de rastreo ni información personal más allá de lo que envía a través del formulario.',
+        ],
+      },
+      {
+        h: 'Cómo usamos sus datos',
+        p: [
+          'Sus datos se utilizan exclusivamente para responder a su mensaje. No compartimos, vendemos ni alquilamos su información a terceros.',
+        ],
+      },
+      {
+        h: 'Almacenamiento',
+        p: [
+          'Sus datos se almacenan solo durante el tiempo necesario para atender su solicitud. Puede solicitar la eliminación en cualquier momento por correo electrónico.',
+        ],
+      },
+      {
+        h: 'Sus derechos',
+        p: [
+          'Usted tiene derecho a:',
+          '• Saber qué datos tenemos sobre usted\n• Solicitar la corrección o eliminación de sus datos\n• Revocar su consentimiento en cualquier momento',
+        ],
+      },
+      {
+        h: 'Contacto',
+        p: [
+          `Para ejercer sus derechos o hacer preguntas sobre esta política, escriba a ${EMAIL}.`,
+        ],
+      },
+    ],
+  },
+};
+
+const c = content[lang];
+---
+
+<BaseLayout lang={lang} metaTitle={c.title} metaDescription={c.metaDesc}>
+  <article class="section-y">
+    <div class="container-md max-w-2xl">
+      <h1 class="font-display text-primary" style="font-size: var(--text-h1);">{c.title.split(' — ')[0]}</h1>
+      <p class="text-text-secondary text-small mt-1 mb-8">Martins de Carvalho</p>
+
+      {c.sections.map((s) => (
+        <section class="mb-8 last:mb-0">
+          <h2 class="font-display text-primary mb-3" style="font-size: var(--text-h3);">{s.h}</h2>
+          {s.p.map((para) => (
+            <p class="text-text-secondary mb-3 whitespace-pre-line">{para}</p>
+          ))}
+        </section>
+      ))}
+    </div>
+  </article>
+</BaseLayout>

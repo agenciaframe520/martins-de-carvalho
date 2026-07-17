@@ -1,0 +1,22 @@
+---
+import { dict, type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict[lang];
+---
+
+<section id="areas" class="section-y">
+  <div class="container-md">
+    <span class="block w-10 h-0.5 bg-accent mb-5 reveal" aria-hidden="true"></span>
+    <h2 class="font-display text-primary mb-10 reveal" style="font-size: var(--text-h1);">{t.areas.heading}</h2>
+    <div class="grid gap-6 sm:grid-cols-2">
+      {t.areas.items.map((a) => (
+        <article class="card-base card-hover flex flex-col gap-3 reveal">
+          <h3 class="font-display text-primary" style="font-size: var(--text-h3);">{a.title}</h3>
+          <p class="text-text-secondary">{a.desc}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

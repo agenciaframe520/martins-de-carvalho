@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import mariaImg from '../assets/maria.png';
+import { dict, type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict[lang];
+---
+
+<section id="sobre-maria" class="section-y">
+  <div class="container-md grid md:grid-cols-[1fr_2fr] gap-10 md:gap-16 items-start">
+    <figure class="order-2 md:order-1 m-0">
+      <Image
+        src={mariaImg}
+        alt={t.sobreM.alt}
+        width={600}
+        height={800}
+        class="w-full h-auto rounded-base border border-border-soft"
+        style="filter: blur(0.3px);"
+      />
+    </figure>
+
+    <div class="order-1 md:order-2 space-y-5">
+      <span class="block w-10 h-0.5 bg-accent mb-5 reveal" aria-hidden="true"></span>
+      <h2 class="font-display text-primary reveal" style="font-size: var(--text-h1);">{t.sobreM.heading}</h2>
+      <p class="reveal">{t.sobreM.p1}</p>
+
+      <ul class="space-y-2 my-6 list-none pl-0 reveal">
+        {t.sobreM.formation.map((f) => (
+          <li class="flex gap-3 text-text-primary">
+            <span class="text-accent font-bold leading-none mt-1 shrink-0" aria-hidden="true">·</span>
+            <span>{f}</span>
+          </li>
+        ))}
+      </ul>
+
+      {t.sobreM.languages && <p class="text-text-secondary italic">{t.sobreM.languages}</p>}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Sobre from '../../components/Sobre.astro';
+import Areas from '../../components/Areas.astro';
+import Publicacoes from '../../components/Publicacoes.astro';
+import MariaSection from '../../components/MariaSection.astro';
+import Contato from '../../components/Contato.astro';
+
+const lang = 'de' as const;
+---
+
+<BaseLayout lang={lang}>
+  <Hero lang={lang} />
+  <Sobre lang={lang} />
+  <Areas lang={lang} />
+  <Publicacoes lang={lang} />
+  <MariaSection lang={lang} />
+  <Contato lang={lang} />
+</BaseLayout>

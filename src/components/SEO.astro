@@ -1,0 +1,101 @@
+---
+import { SITE, LANGS, EMAIL, WHATSAPP, dict, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+  pathname: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  noindex?: boolean;
+}
+
+const { lang, pathname, metaTitle, metaDescription, noindex } = Astro.props;
+const t = dict[lang];
+const title = metaTitle ?? t.meta.title;
+const desc = metaDescription ?? t.meta.description;
+
+const canonical = new URL(pathname, SITE).href;
+const ogImage = new URL('/og-image.png', SITE).href;
+
+// Alternate hreflang entries — only for main landing pages, not privacy/thank-you
+const isLanding = pathname.replace(/\/$/, '') === `/${lang}`;
+const alternates = isLanding
+  ? [...LANGS.map((l) => ({ hreflang: l.hreflang, href: new URL(`/${l.code}/`, SITE).href })), { hreflang: 'x-default', href: new URL('/pt/', SITE).href }]
+  : [];
+
+// schema.org: ProfessionalService + Person + WebSite + WebPage
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ProfessionalService',
+      '@id': `${SITE}/#org`,
+      name: 'Martins de Carvalho',
+      description: t.meta.description,
+      url: SITE,
+      email: EMAIL,
+      telephone: WHATSAPP,
+      founder: { '@id': `${SITE}/#maria` },
+      areaServed: ['BR', 'DE', 'US', 'ES'],
+      knowsLanguage: ['pt-BR', 'de-DE', 'en-US', 'es-ES'],
+      sameAs: ['https://www.linkedin.com/in/mariamartinsdecarvalho4a619127'],
+    },
+    {
+      '@type': 'Person',
+      '@id': `${SITE}/#maria`,
+      name: 'M\u00e1ria Pereira Martins de Carvalho',
+      jobTitle: 'Tax Advisor & Accountant',
+      worksFor: { '@id': `${SITE}/#org` },
+      url: SITE,
+      email: EMAIL,
+      telephone: WHATSAPP,
+      knowsLanguage: ['pt-BR', 'de-DE', 'en-US', 'es-ES'],
+      alumniOf: [
+        'Universidade Mackenzie',
+        'FECAP',
+        'Ruhr Universit\u00e4t Bochum',
+        'USP/Esalq',
+        'IBET',
+      ],
+      sameAs: ['https://www.linkedin.com/in/mariamartinsdecarvalho4a619127'],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE}/#website`,
+      url: SITE,
+      name: 'Martins de Carvalho',
+      inLanguage: ['pt-BR', 'de-DE', 'en-US', 'es-ES'],
+      publisher: { '@id': `${SITE}/#org` },
+    },
+  ],
+};
+---
+
+<title>{title}</title>
+<meta name="description" content={desc} />
+<link rel="canonical" href={canonical} />
+
+{noindex ? (
+  <meta name="robots" content="noindex" />
+) : (
+  <meta name="robots" content="index, follow" />
+)}
+
+{alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content={t.htmlLang.replace('-', '_')} />
+<meta property="og:site_name" content="Martins de Carvalho" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={desc} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={desc} />
+<meta name="twitter:image" content={ogImage} />
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />

@@ -1,0 +1,85 @@
+---
+import { dict, type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict[lang];
+
+const actionMap: Record<Lang, string> = {
+  pt: '/pt/obrigado/',
+  de: '/de/danke/',
+  en: '/en/thank-you/',
+  es: '/es/gracias/',
+};
+
+const action = actionMap[lang];
+const formName = `contato-${lang}`;
+---
+
+<section id="contato" class="section-y bg-background-alt">
+  <div class="container-md grid md:grid-cols-2 gap-10 md:gap-16 items-start">
+    <div class="reveal">
+      <span class="block w-10 h-0.5 bg-accent mb-5" aria-hidden="true"></span>
+      <h2 class="font-display text-primary mb-4" style="font-size: var(--text-h1);">{t.contato.heading}</h2>
+      <p class="text-text-secondary mb-4">{t.contato.languages}</p>
+    </div>
+
+    <form
+      name={formName}
+      method="POST"
+      action={action}
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      class="space-y-4 reveal"
+    >
+      <input type="hidden" name="form-name" value={formName} />
+      <p class="hidden">
+        <label>Don't fill this out: <input name="bot-field" /></label>
+      </p>
+
+      <div>
+        <label for="name" class="block text-small text-text-secondary mb-1.5 font-medium">{t.contato.name}</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          autocomplete="name"
+          class="w-full rounded-base border border-border-soft px-4 py-3 bg-background focus:border-primary focus:outline-none transition-colors"
+        />
+      </div>
+
+      <div>
+        <label for="email" class="block text-small text-text-secondary mb-1.5 font-medium">{t.contato.email}</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          autocomplete="email"
+          class="w-full rounded-base border border-border-soft px-4 py-3 bg-background focus:border-primary focus:outline-none transition-colors"
+        />
+      </div>
+
+      <div>
+        <label for="message" class="block text-small text-text-secondary mb-1.5 font-medium">{t.contato.message}</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          class="w-full rounded-base border border-border-soft px-4 py-3 bg-background focus:border-primary focus:outline-none transition-colors resize-y"
+        ></textarea>
+      </div>
+
+      <button type="submit" id="form-submit" class="btn-primary w-full sm:w-auto">{t.contato.submit}</button>
+    </form>
+  </div>
+</section>
+
+<script is:inline>
+  document.getElementById('form-submit')?.closest('form')?.addEventListener('submit', function () {
+    var btn = document.getElementById('form-submit');
+    if (btn) { btn.disabled = true; btn.textContent = btn.textContent?.replace(/^(.+)$/, '$1…'); }
+  });
+</script>
