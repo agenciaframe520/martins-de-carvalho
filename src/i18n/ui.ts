@@ -86,8 +86,8 @@ export const dict: Record<Lang, Dict> = {
           desc: 'Due diligence tributária, identificação de riscos, estruturação de fusões e aquisições, reorganização corporativa e planejamento sucessório.',
         },
         {
-          title: 'Contabilidade Empresarial',
-          desc: 'Contabilidade com foco em precisão, compliance e informação para decisões estratégicas. Experiência com SAP e sistemas fiscais integrados.',
+          title: 'Contabilidade',
+          desc: 'Contabilidade com foco em precisão, compliance e informação para decisões estratégicas, para empresas e pessoas físicas. Experiência com SAP e sistemas fiscais integrados.',
         },
       ],
     },
@@ -122,7 +122,7 @@ export const dict: Record<Lang, Dict> = {
     footer: { rights: 'Todos os direitos reservados.', linkedin: 'LinkedIn' },
     meta: {
       title: 'Martins de Carvalho — Consultoria tributária e contabilidade',
-      description: 'Consultoria tributária estratégica e contabilidade para empresas e pessoas físicas no Brasil e no exterior. Reforma Tributária (IBS/CBS), tributação internacional, M&A e contabilidade empresarial.',
+      description: 'Consultoria tributária estratégica e contabilidade para empresas e pessoas físicas no Brasil e no exterior. Reforma Tributária (IBS/CBS), tributação internacional, M&A e contabilidade.',
     },
   },
   de: {
@@ -326,7 +326,7 @@ export const dict: Record<Lang, Dict> = {
     footer: { rights: 'Todos los derechos reservados.', linkedin: 'LinkedIn' },
     meta: {
       title: 'Martins de Carvalho — Asesoría tributaria y contabilidad',
-      description: 'Asesoría tributaria estratégica y contabilidad para empresas y personas físicas en Brasil y en el exterior. Reforma Tributaria (IBS/CBS), tributación internacional, M&A y contabilidad empresarial.',
+      description: 'Asesoría tributaria estratégica y contabilidad para empresas y personas físicas en Brasil y en el exterior. Reforma Tributaria (IBS/CBS), tributación internacional, M&A y contabilidad.',
     },
   },
 };

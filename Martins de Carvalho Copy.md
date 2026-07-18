@@ -38,9 +38,9 @@ Consultoria estratégica para a transição do sistema tributário brasileiro (2
 
 Due diligence tributária, identificação de riscos, estruturação de operações de fusão e aquisição, reorganização corporativa e planejamento sucessório.
 
-### Contabilidade Empresarial
+### Contabilidade
 
-Contabilidade para médias e grandes empresas, com foco em precisão, compliance e informação para decisões estratégicas. Experiência com SAP e sistemas fiscais integrados.
+Contabilidade com foco em precisão, compliance e informação para decisões estratégicas, para empresas e pessoas físicas. Experiência com SAP e sistemas fiscais integrados.
 
 ---
 
