@@ -154,8 +154,8 @@ export const dict: Record<Lang, Dict> = {
           desc: 'Steuerliche Due-Diligence, Risikoermittlung, Strukturierung von Fusionen und Akquisitionen, gesellschaftliche Reorganisation und Nachfolgeplanung.',
         },
         {
-          title: 'Unternehmens-Rechnungslegung',
-          desc: 'Rechnungslegung mit Fokus auf Präzision, Compliance und entscheidungsrelevante Information. Erfahrung mit SAP und integrierten Steuersystemen.',
+          title: 'Rechnungslegung',
+          desc: 'Rechnungslegung mit Fokus auf Präzision, Compliance und entscheidungsrelevante Information, für Unternehmen und Privatpersonen. Erfahrung mit SAP und integrierten Steuersystemen.',
         },
       ],
     },
@@ -190,7 +190,7 @@ export const dict: Record<Lang, Dict> = {
     footer: { rights: 'Alle Rechte vorbehalten.', linkedin: 'LinkedIn' },
     meta: {
       title: 'Martins de Carvalho — Steuerberatung & Rechnungslegung',
-      description: 'Strategische Steuerberatung und Rechnungslegung für Unternehmen und Privatpersonen in Brasilien und im Ausland. Steuerreform (IBS/CBS), internationale Besteuerung, M&A und Unternehmens-Rechnungslegung.',
+      description: 'Strategische Steuerberatung und Rechnungslegung für Unternehmen und Privatpersonen in Brasilien und im Ausland. Steuerreform (IBS/CBS), internationale Besteuerung, M&A und Rechnungslegung.',
     },
   },
   en: {
@@ -222,8 +222,8 @@ export const dict: Record<Lang, Dict> = {
           desc: 'Tax due diligence, risk identification, structuring of mergers and acquisitions, corporate reorganization and succession planning.',
         },
         {
-          title: 'Corporate Accounting',
-          desc: 'Accounting with a focus on accuracy, compliance and decision-grade information. Experience with SAP and integrated tax systems.',
+          title: 'Accounting',
+          desc: 'Accounting with a focus on accuracy, compliance and decision-grade information, for companies and individuals. Experience with SAP and integrated tax systems.',
         },
       ],
     },
@@ -258,7 +258,7 @@ export const dict: Record<Lang, Dict> = {
     footer: { rights: 'All rights reserved.', linkedin: 'LinkedIn' },
     meta: {
       title: 'Martins de Carvalho — Tax advisory and accounting',
-      description: 'Strategic tax advisory and accounting for companies and individuals in Brazil and abroad. Tax Reform (IBS/CBS), international taxation, M&A and corporate accounting.',
+      description: 'Strategic tax advisory and accounting for companies and individuals in Brazil and abroad. Tax Reform (IBS/CBS), international taxation, M&A and accounting.',
     },
   },
   es: {
