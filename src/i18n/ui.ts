@@ -290,8 +290,8 @@ export const dict: Record<Lang, Dict> = {
           desc: 'Due diligence tributario, identificación de riesgos, estructuración de operaciones de fusión y adquisición, reorganización corporativa y planificación sucesoria.',
         },
         {
-          title: 'Contabilidad Empresarial',
-          desc: 'Contabilidad con foco en precisión, compliance e información para decisiones estratégicas. Experiencia con SAP y sistemas fiscales integrados.',
+          title: 'Contabilidad',
+          desc: 'Contabilidad con foco en precisión, compliance e información para decisiones estratégicas, para empresas y personas físicas. Experiencia con SAP y sistemas fiscales integrados.',
         },
       ],
     },
