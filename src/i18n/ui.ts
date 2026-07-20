@@ -143,15 +143,15 @@ export const dict: Record<Lang, Dict> = {
       items: [
         {
           title: 'Internationale Besteuerung',
-          desc: 'Steuerplanung für grenzüberschreitende Aktivitäten. Strukturierung ausländischer Investitionen, Doppelbesteuerungsabkommen, Verrechnungspreise und steuerliche Compliance in mehreren Rechtsgebieten.',
+          desc: 'Steuerplanung für grenzüberschreitende Aktivitäten. Strukturierung ausländischer Investitionen, Doppelbesteuerungsabkommen, Verrechnungspreise und steuerliche Compliance in mehreren Jurisdiktionen.',
         },
         {
           title: 'Steuerreform (IBS/CBS)',
-          desc: 'Strategische Beratung für den Übergang des brasilianischen Steuersystems (2026-2033). Folgenanalyse, Vertragsprüfung, Systemanpassung und Planung für die neue duale IVA, die PIS, Cofins, ICMS, ISS und IPI ersetzt.',
+          desc: 'Strategische Beratung für den Übergang des brasilianischen Steuersystems (2026-2033). Folgenanalyse, Vertragsprüfung, Systemanpassung und Planung für die neue duale Mehrwertsteuer, die PIS, Cofins, ICMS, ISS und IPI ersetzt.',
         },
         {
           title: 'M&A und Gesellschaftsreorganisation',
-          desc: 'Steuerliche Due-Diligence, Risikoermittlung, Strukturierung von Fusionen und Akquisitionen, gesellschaftliche Reorganisation und Nachfolgeplanung.',
+          desc: 'Steuerliche Due-Diligence, Risikoermittlung, Strukturierung von Fusionen und Akquisitionen, gesellschaftsrechtliche Reorganisation und Nachfolgeplanung.',
         },
         {
           title: 'Buchhaltung',
@@ -175,10 +175,10 @@ export const dict: Record<Lang, Dict> = {
     },
     sobreM: {
       heading: 'Über die Gründerin',
-      p1: 'Mária Pereira Martins de Carvalho ist Rechtsanw\u00e4ltin und Steuerberaterin mit \u00fcber 25 Jahren Erfahrung in Anwaltskanzleien, Wirtschaftspr\u00fcfung und Leitung der Rechtsabteilung. Umfassende Kenntnisse im Steuerrecht und Rechnungswesen sowie im Gesellschafts- und Vertragsrecht mit Fokus auf ausl\u00e4ndische Mandanten. Ihre Ausbildung untermauert die Arbeit des Büros:',
+      p1: 'Mária Pereira Martins de Carvalho ist Rechtsanw\u00e4ltin und Steuerberaterin mit \u00fcber 25 Jahren Erfahrung in Anwaltskanzleien, Wirtschaftspr\u00fcfung und Leitung der Rechtsabteilung. Sie verf\u00fcgt \u00fcber umfassende Kenntnisse im Steuerrecht und Rechnungswesen sowie im Gesellschafts- und Vertragsrecht mit Fokus auf ausl\u00e4ndische Mandanten. Ihre Ausbildung untermauert die Arbeit des Büros:',
       formation: [
-        'Promotion im Vergleichenden Steuerrecht — Deutsches und brasilianisches Einkommensteuerrecht — Ruhr-Universität Bochum (in Bearbeitung)',
-        'LL.M. Steuer- und Wirtschaftsrecht (Steuer und Wirtschaft) — Ruhr-Universität Bochum',
+        'Promotion in Vergleichendem Steuerrecht — Deutsches und brasilianisches Einkommensteuerrecht — Ruhr-Universität Bochum (in Bearbeitung)',
+        'LL.M. Steuer- und Wirtschaftsrecht — Ruhr-Universität Bochum',
         'MBA Accounting and Finance — USP/Esalq',
         'Rechtswissenschaften — Universidade Presbiteriana Mackenzie',
         'Buchhaltung — FECAP',
