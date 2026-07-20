@@ -67,7 +67,7 @@ export const dict: Record<Lang, Dict> = {
     sobre: {
       heading: 'Sobre o Escritório',
       p1: 'O Martins de Carvalho atende empresas e pessoas f\u00edsicas, muitas com opera\u00e7\u00f5es internacionais, que precisam de orienta\u00e7\u00e3o tribut\u00e1ria estrat\u00e9gica em um pa\u00eds onde as regras mudam o tempo todo.',
-      p2: 'Combinamos mais de 25 anos de experiência no Brasil e na Alemanha com uma abordagem direta e acessível. Acompanhamos de perto as constantes mudanças na legislação, especialmente a Reforma Tributária (IBS/CBS), para oferecer orientação que protege seus interesses e aproveita oportunidades.',
+      p2: 'Combinamos mais de 25 anos de experiência em consultoria tributária, atendendo clientes internacionais, com uma abordagem direta e acessível. Acompanhamos de perto as constantes mudanças na legislação, especialmente a Reforma Tributária (IBS/CBS), para oferecer orientação que protege seus interesses e aproveita oportunidades.',
       languages: '',
     },
     areas: {
@@ -87,7 +87,7 @@ export const dict: Record<Lang, Dict> = {
         },
         {
           title: 'Contabilidade',
-          desc: 'Contabilidade com foco em precisão, compliance e informação para decisões estratégicas, para empresas e pessoas físicas. Experiência com SAP e sistemas fiscais integrados.',
+          desc: 'Contabilidade com foco em precisão, compliance e informação para decisões estratégicas, para empresas e pessoas físicas.',
         },
       ],
     },
@@ -109,7 +109,7 @@ export const dict: Record<Lang, Dict> = {
       heading: 'Sobre a Fundadora',
       p1: 'Mária Pereira Martins de Carvalho é advogada e contadora com mais de 25 anos de experiência adquirida em escritórios de advocacia, auditoria e coordenação de departamento jurídico. Tem amplo conhecimento em direito tributário e contabilidade, além de experiência em direito societário e contratual voltada para clientes estrangeiros. Sua formação sustenta a atuação do escritório:',
       formation: [
-        'PhD em Direito Comparado — Direito Tributário Brasileiro e Alemão — Ruhr-Universität Bochum',
+        'PhD em Direito Comparado — Direito Tributário Brasileiro e Alemão — Ruhr-Universität Bochum (em andamento)',
         'LL.M. em Direito Tributário e Econômico (Steuer und Wirtschaft) — Ruhr-Universität Bochum',
         'MBA em Accounting and Finance — USP/Esalq',
         'Bacharelado em Direito — Universidade Presbiteriana Mackenzie',
@@ -129,11 +129,11 @@ export const dict: Record<Lang, Dict> = {
     htmlLang: 'de-DE',
     nav: { sobre: 'Über uns', areas: 'Leistungen', publicacoes: 'Publikationen', contato: 'Kontakt' },
     hero: {
-      tagline: 'Steuerberatung und Rechnungslegung<br>für Unternehmen und Privatpersonen mit Aktivitäten in Brasilien und im Ausland.',
+      tagline: 'Steuerberatung und Buchhaltung<br>für Unternehmen und Privatpersonen mit Aktivitäten in Brasilien und im Ausland.',
       cta: 'Kontakt aufnehmen',
     },
     sobre: {
-      heading: 'Über die Kanzlei',
+      heading: 'Über das Büro',
       p1: 'Martins de Carvalho betreut Unternehmen und Privatpersonen, viele mit internationalen Aktivitäten, die in einem Land mit ständig wechselnden Regeln strategische Steuerberatung benötigen.',
       p2: 'Wir verbinden über 25 Jahre Erfahrung in Brasilien und Deutschland mit einer direkten und zugänglichen Herangehensweise. Wir begleiten die ständigen Änderungen der Gesetzgebung, insbesondere die Steuerreform (IBS/CBS), um Strategien zu entwickeln, die Ihre Interessen schützen und Chancen nutzen.',
       languages: '',
@@ -154,14 +154,14 @@ export const dict: Record<Lang, Dict> = {
           desc: 'Steuerliche Due-Diligence, Risikoermittlung, Strukturierung von Fusionen und Akquisitionen, gesellschaftliche Reorganisation und Nachfolgeplanung.',
         },
         {
-          title: 'Rechnungslegung',
-          desc: 'Rechnungslegung mit Fokus auf Präzision, Compliance und entscheidungsrelevante Information, für Unternehmen und Privatpersonen. Erfahrung mit SAP und integrierten Steuersystemen.',
+          title: 'Buchhaltung',
+          desc: 'Buchhaltung mit Fokus auf Präzision, Compliance und entscheidungsrelevante Information, für Unternehmen und Privatpersonen.',
         },
       ],
     },
     publicacoes: {
       heading: 'Publikationen & Artikel',
-      intro: 'Mária veröffentlicht regelmäßig Beiträge zu Steuerrecht, Rechnungslegung und der brasilianischen Steuerreform (auf Portugiesisch).',
+      intro: 'Mária veröffentlicht regelmäßig Beiträge zu Steuerrecht, Buchhaltung und der brasilianischen Steuerreform (auf Portugiesisch).',
       linkLabel: 'Alle Artikel auf Cloud Coaching aufrufen →',
     },
     contato: {
@@ -175,13 +175,13 @@ export const dict: Record<Lang, Dict> = {
     },
     sobreM: {
       heading: 'Über die Gründerin',
-      p1: 'Mária Pereira Martins de Carvalho ist Rechtsanw\u00e4ltin und Steuerberaterin mit \u00fcber 25 Jahren Erfahrung in Anwaltskanzleien, Wirtschaftspr\u00fcfung und Leitung der Rechtsabteilung. Umfassende Kenntnisse im Steuerrecht und Rechnungswesen sowie im Gesellschafts- und Vertragsrecht mit Fokus auf ausl\u00e4ndische Mandanten. Ihre Ausbildung untermauert die Arbeit der Kanzlei:',
+      p1: 'Mária Pereira Martins de Carvalho ist Rechtsanw\u00e4ltin und Steuerberaterin mit \u00fcber 25 Jahren Erfahrung in Anwaltskanzleien, Wirtschaftspr\u00fcfung und Leitung der Rechtsabteilung. Umfassende Kenntnisse im Steuerrecht und Rechnungswesen sowie im Gesellschafts- und Vertragsrecht mit Fokus auf ausl\u00e4ndische Mandanten. Ihre Ausbildung untermauert die Arbeit des Büros:',
       formation: [
-        'Promotion im Vergleichenden Steuerrecht — Deutsches und brasilianisches Einkommensteuerrecht — Ruhr-Universität Bochum',
+        'Promotion im Vergleichenden Steuerrecht — Deutsches und brasilianisches Einkommensteuerrecht — Ruhr-Universität Bochum (in Bearbeitung)',
         'LL.M. Steuer- und Wirtschaftsrecht (Steuer und Wirtschaft) — Ruhr-Universität Bochum',
         'MBA Accounting and Finance — USP/Esalq',
         'Rechtswissenschaften — Universidade Presbiteriana Mackenzie',
-        'Rechnungslegung — FECAP',
+        'Buchhaltung — FECAP',
         'Steuerplanung — IBET',
       ],
       languages: '',
@@ -189,8 +189,8 @@ export const dict: Record<Lang, Dict> = {
     },
     footer: { rights: 'Alle Rechte vorbehalten.', linkedin: 'LinkedIn' },
     meta: {
-      title: 'Martins de Carvalho — Steuerberatung & Rechnungslegung',
-      description: 'Strategische Steuerberatung und Rechnungslegung für Unternehmen und Privatpersonen in Brasilien und im Ausland. Steuerreform (IBS/CBS), internationale Besteuerung, M&A und Rechnungslegung.',
+      title: 'Martins de Carvalho — Steuerberatung & Buchhaltung',
+      description: 'Strategische Steuerberatung und Buchhaltung für Unternehmen und Privatpersonen in Brasilien und im Ausland. Steuerreform (IBS/CBS), internationale Besteuerung, M&A und Buchhaltung.',
     },
   },
   en: {
@@ -223,7 +223,7 @@ export const dict: Record<Lang, Dict> = {
         },
         {
           title: 'Accounting',
-          desc: 'Accounting with a focus on accuracy, compliance and decision-grade information, for companies and individuals. Experience with SAP and integrated tax systems.',
+          desc: 'Accounting with a focus on accuracy, compliance and decision-grade information, for companies and individuals.',
         },
       ],
     },
@@ -245,7 +245,7 @@ export const dict: Record<Lang, Dict> = {
       heading: 'About the Founder',
       p1: 'M\u00e1ria Pereira Martins de Carvalho is a lawyer and accountant with over 25 years of experience acquired in law firms, auditing companies and legal department coordination. Extensive knowledge in tax law and accounting, as well as corporate and contract law focused on foreign clients. Her background underpins the firm\u2019s expertise:',
       formation: [
-        'PhD in Comparative Law — German and Brazilian Income Tax — Ruhr Universität Bochum',
+        'PhD in Comparative Law — German and Brazilian Income Tax — Ruhr Universität Bochum (in progress)',
         'LL.M. Tax and Economic Law (Steuer und Wirtschaft) — Ruhr Universität Bochum',
         'MBA Accounting and Finance — USP/Esalq',
         'Bachelor of Law — Universidade Presbiteriana Mackenzie',
@@ -291,7 +291,7 @@ export const dict: Record<Lang, Dict> = {
         },
         {
           title: 'Contabilidad',
-          desc: 'Contabilidad con foco en precisión, compliance e información para decisiones estratégicas, para empresas y personas físicas. Experiencia con SAP y sistemas fiscales integrados.',
+          desc: 'Contabilidad con foco en precisión, compliance e información para decisiones estratégicas, para empresas y personas físicas.',
         },
       ],
     },
@@ -313,7 +313,7 @@ export const dict: Record<Lang, Dict> = {
       heading: 'Acerca de la Fundadora',
       p1: 'Mária Pereira Martins de Carvalho es abogada y contadora con más de 25 años de experiencia adquirida en despachos de abogados, auditoría y coordinación de departamento jurídico. Amplio conocimiento en derecho tributario y contabilidad, así como en derecho societario y contractual orientado a clientes extranjeros. Su formación respalda la labor del despacho:',
       formation: [
-        'Doctorado en Derecho Comparado — Derecho Tributario Alemán y Brasileño — Ruhr Universität Bochum',
+        'Doctorado en Derecho Comparado — Derecho Tributario Alemán y Brasileño — Ruhr Universität Bochum (en curso)',
         'LL.M. Derecho Tributario y Económico (Steuer und Wirtschaft) — Ruhr Universität Bochum',
         'MBA Accounting and Finance — USP/Esalq',
         'Derecho — Universidade Presbiteriana Mackenzie',
