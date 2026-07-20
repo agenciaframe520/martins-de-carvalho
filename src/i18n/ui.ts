@@ -203,7 +203,7 @@ export const dict: Record<Lang, Dict> = {
     sobre: {
       heading: 'About the Firm',
       p1: 'Martins de Carvalho serves companies and individuals, many with international operations, that need strategic tax guidance in a country where the rules change constantly.',
-      p2: 'We combine over 25 years of experience in Brazil and Germany with a direct and approachable style. We closely follow the constant changes in legislation, especially the Tax Reform (IBS/CBS), to provide guidance that protects your interests and leverages opportunities.',
+      p2: 'We combine over 25 years of experience in Brazil and Germany with a direct and approachable style. We closely follow the ongoing changes in legislation, especially the Tax Reform (IBS/CBS), to provide guidance that protects your interests and captures opportunities.',
       languages: '',
     },
     areas: {
@@ -215,7 +215,7 @@ export const dict: Record<Lang, Dict> = {
         },
         {
           title: 'Tax Reform (IBS/CBS)',
-          desc: 'Strategic advisory for the transition of the Brazilian tax system (2026-2033). Impact analysis, contract review, systems adaptation and planning for the new Dual VAT that replaces PIS, Cofins, ICMS, ISS and IPI.',
+          desc: 'Strategic advisory for the transition to the new Brazilian tax system (2026-2033). Impact analysis, contract review, systems adaptation and planning for the new Dual VAT that replaces PIS, Cofins, ICMS, ISS and IPI.',
         },
         {
           title: 'M&A and Corporate Reorganization',
@@ -243,14 +243,14 @@ export const dict: Record<Lang, Dict> = {
     },
     sobreM: {
       heading: 'About the Founder',
-      p1: 'M\u00e1ria Pereira Martins de Carvalho is a lawyer and accountant with over 25 years of experience acquired in law firms, auditing companies and legal department coordination. Extensive knowledge in tax law and accounting, as well as corporate and contract law focused on foreign clients. Her background underpins the firm\u2019s expertise:',
+      p1: 'M\u00e1ria Pereira Martins de Carvalho is a lawyer and accountant with over 25 years of experience acquired in law firms, auditing companies and legal department coordination. Extensive knowledge in tax law and accounting, as well as corporate and contract law, with a focus on foreign clients. Her background underpins the firm\u2019s expertise:',
       formation: [
         'PhD in Comparative Law — German and Brazilian Income Tax — Ruhr Universität Bochum (in progress)',
         'LL.M. Tax and Economic Law (Steuer und Wirtschaft) — Ruhr Universität Bochum',
         'MBA Accounting and Finance — USP/Esalq',
         'Bachelor of Law — Universidade Presbiteriana Mackenzie',
-        'Accounting Sciences — FECAP',
-        'Tax Planning — IBET',
+        'Accounting — FECAP',
+        'Tax Planning (Specialization) — IBET',
       ],
       languages: '',
       alt: 'Portrait of Mária Pereira Martins de Carvalho',
@@ -271,7 +271,7 @@ export const dict: Record<Lang, Dict> = {
     sobre: {
       heading: 'Acerca del Despacho',
       p1: 'Martins de Carvalho atiende a empresas y personas físicas, muchas con operaciones internacionales, que necesitan orientación tributaria estratégica en un país donde las reglas cambian constantemente.',
-      p2: 'Combinamos más de 25 años de experiencia en Brasil y Alemania con un enfoque directo y accesible. Seguimos de cerca los constantes cambios en la legislación, especialmente la Reforma Tributaria (IBS/CBS), para ofrecer orientación que protege sus intereses y aprovecha oportunidades.',
+      p2: 'Combinamos más de 25 años de experiencia en Brasil y Alemania con un enfoque directo y accesible. Seguimos de cerca los continuos cambios en la legislación, especialmente la Reforma Tributaria (IBS/CBS), para ofrecer orientación que protege sus intereses y aprovecha oportunidades.',
       languages: '',
     },
     areas: {
@@ -279,7 +279,7 @@ export const dict: Record<Lang, Dict> = {
       items: [
         {
           title: 'Tributación Internacional',
-          desc: 'Planificación tributaria para operaciones cross-border. Estructuración de inversiones extranjeras, convenios para evitar la doble imposición, precios de transferencia y compliance fiscal en múltiples jurisdicciones.',
+          desc: 'Planificación tributaria para operaciones transfronterizas. Estructuración de inversiones extranjeras, convenios para evitar la doble imposición, precios de transferencia y compliance fiscal en múltiples jurisdicciones.',
         },
         {
           title: 'Reforma Tributaria (IBS/CBS)',
@@ -311,12 +311,12 @@ export const dict: Record<Lang, Dict> = {
     },
     sobreM: {
       heading: 'Acerca de la Fundadora',
-      p1: 'Mária Pereira Martins de Carvalho es abogada y contadora con más de 25 años de experiencia adquirida en despachos de abogados, auditoría y coordinación de departamento jurídico. Amplio conocimiento en derecho tributario y contabilidad, así como en derecho societario y contractual orientado a clientes extranjeros. Su formación respalda la labor del despacho:',
+      p1: 'Mária Pereira Martins de Carvalho es abogada y contadora con más de 25 años de experiencia adquirida en despachos de abogados, firmas de auditoría y coordinación de departamento jurídico. Amplio conocimiento en derecho tributario y contabilidad, así como en derecho societario y contractual orientado a clientes extranjeros. Su formación respalda la labor del despacho:',
       formation: [
         'Doctorado en Derecho Comparado — Derecho Tributario Alemán y Brasileño — Ruhr Universität Bochum (en curso)',
         'LL.M. Derecho Tributario y Económico (Steuer und Wirtschaft) — Ruhr Universität Bochum',
-        'MBA Accounting and Finance — USP/Esalq',
-        'Derecho — Universidade Presbiteriana Mackenzie',
+        'MBA en Contabilidad y Finanzas — USP/Esalq',
+        'Licenciatura en Derecho — Universidade Presbiteriana Mackenzie',
         'Ciencias Contables — FECAP',
         'Planificación Tributaria — IBET',
       ],
